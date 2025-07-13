@@ -23,9 +23,7 @@ public class BancoController{
 
 	private final BankService bancoService;
 
-	public BancoController(BankService bancoService){
-		this.bancoService = bancoService;
-	}
+	public BancoController(BankService bancoService){this.bancoService = bancoService;}
 
 	@GetMapping("/findAll")
 	public List<Bank> findAllBank(){
