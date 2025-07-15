@@ -15,11 +15,10 @@ import lombok.Setter;
  * @version 1.0
  * @since 7/13/2025
  */
-
-@Entity
-@Table(name = "banco")
 @Getter
 @Setter
+@Entity
+@Table(name = "bank")
 public class Bank{
 
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
