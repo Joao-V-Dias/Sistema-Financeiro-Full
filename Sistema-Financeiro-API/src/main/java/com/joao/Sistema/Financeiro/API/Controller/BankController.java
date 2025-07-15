@@ -19,24 +19,26 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/api/bank")
-public class BancoController{
+public class BankController{
 
-	private final BankService bancoService;
+	private final BankService bankService;
 
-	public BancoController(BankService bancoService){this.bancoService = bancoService;}
-
-	@GetMapping("/findAll")
-	public List<Bank> findAllBank(){
-		return bancoService.findAll();
+	public BankController(BankService bancoService){
+		this.bankService = bancoService;
 	}
 
 	@PostMapping("/save")
-	public void saveBank(@RequestBody Bank bank){
-		bancoService.saveBank(bank);
+	public void save(@RequestBody Bank bank){
+		bankService.save(bank);
+	}
+
+	@GetMapping("/findAll")
+	public List<Bank> findAll(){
+		return bankService.findAll();
 	}
 
 	@DeleteMapping("/delete/{id}")
-	public void deleteBank(@PathVariable Long id){
-		bancoService.deleteBank(id);
+	public void delete(@PathVariable Long id){
+		bankService.delete(id);
 	}
 }

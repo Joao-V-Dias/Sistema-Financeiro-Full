@@ -25,15 +25,15 @@ public class BankService{
 		this.bankRepository = bankRepository;
 	}
 
+	public void save(Bank bank){
+		bankRepository.save(bank);
+	}
+
 	public List<Bank> findAll(){
 		return bankRepository.findAll();
 	}
 
-	public void saveBank(Bank bank){
-		bankRepository.save(bank);
-	}
-
-	public void deleteBank(Long id){
+	public void delete(Long id){
 		bankRepository.deleteById(id);
 	}
 }
