@@ -1,0 +1,34 @@
+package com.joao.Sistema.Financeiro.API.Model;
+
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.time.LocalDate;
+
+/**
+ * PaymentTitle -
+ *
+ * <p>Classe criada em 7/16/2025 por joaodias.
+ *
+ * <p>Essa classe faz parte do projeto Sistema-Financeiro-API.
+ *
+ * @author joaodias
+ * @version 1.0
+ * @since 7/16/2025
+ */
+@Getter
+@Setter
+@Entity
+@Table(name = "paymentTitle")
+public class PaymentTitle{
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	private Long idDocument;
+
+	private double amount;
+
+	private LocalDate dueDate;
+}
