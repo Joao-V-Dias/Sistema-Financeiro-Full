@@ -33,6 +33,17 @@ public class BankService{
 		return bankRepository.findAll();
 	}
 
+	public void update(Long id, Bank bank){
+		Bank existing = bankRepository.findById(id).orElseThrow(() -> new RuntimeException("Banco não encontrado"));
+
+		existing.setName(bank.getName());
+		existing.setAccount(bank.getAccount());
+		existing.setAgency(bank.getAgency());
+		existing.setBalance(bank.getBalance());
+
+		bankRepository.save(existing);
+	}
+
 	public void delete(Long id){
 		bankRepository.deleteById(id);
 	}

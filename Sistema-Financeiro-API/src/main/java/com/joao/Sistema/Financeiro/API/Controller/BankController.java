@@ -2,6 +2,7 @@ package com.joao.Sistema.Financeiro.API.Controller;
 
 import com.joao.Sistema.Financeiro.API.Model.Bank;
 import com.joao.Sistema.Financeiro.API.Service.BankService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -35,6 +36,11 @@ public class BankController{
 	@GetMapping("/findAll")
 	public List<Bank> findAll(){
 		return bankService.findAll();
+	}
+
+	@PutMapping("/update/{id}")
+	public void update(@PathVariable Long id, @RequestBody Bank bank){
+		 bankService.update(id, bank);
 	}
 
 	@DeleteMapping("/delete/{id}")

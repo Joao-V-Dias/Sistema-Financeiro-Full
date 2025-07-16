@@ -34,6 +34,19 @@ public class PartnerService{
 		return partnerRepository.findAll();
 	}
 
+	public void update(Long id, Partner partner){
+		Partner existing = partnerRepository.findById(id).orElseThrow(() -> new RuntimeException("Parceiro nao encontrado"));
+
+		existing.setFirstName(partner.getFirstName());
+		existing.setLastName(partner.getLastName());
+		existing.setDocument(partner.getDocument());
+		existing.setPhone(partner.getPhone());
+		existing.setEmail(partner.getEmail());
+		existing.setDateBirth(partner.getDateBirth());
+
+		partnerRepository.save(existing);
+	}
+
 	public void delete(Long id){
 		partnerRepository.deleteById(id);
 	}

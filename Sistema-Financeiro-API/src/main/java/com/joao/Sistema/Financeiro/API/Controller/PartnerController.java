@@ -27,13 +27,18 @@ public class PartnerController{
 	}
 
 	@PostMapping("/save")
-	public void save(Partner partner){
+	public void save(@RequestBody Partner partner){
 		partnerService.save(partner);
 	}
 
 	@GetMapping("/findAll")
 	public List<Partner> findAll(){
 		return partnerService.findAll();
+	}
+
+	@PutMapping("/update/{id}")
+	public void update(@PathVariable Long id, @RequestBody Partner partner){
+		partnerService.update(id, partner);
 	}
 
 	@DeleteMapping("/delete/{id}")
