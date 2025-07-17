@@ -28,11 +28,13 @@ public class PaymentTitle{
 
 	@ManyToOne
 	@Column(name = "idDocument")
-	private Long idDocument;
+	private Document document;
 
 	@Column(name = "amount")
 	private Integer amount;
 
 	@Column(name = "dueDate")
 	private LocalDate dueDate;
+
+
 }

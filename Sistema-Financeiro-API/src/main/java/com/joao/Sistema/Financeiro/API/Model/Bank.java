@@ -12,7 +12,7 @@ import lombok.Setter;
  * <p>Essa classe faz parte do projeto Sistema-Financeiro-API.
  *
  * @author joaodias
- * @version 1.0
+ * @version 1.1
  * @since 7/13/2025
  */
 @Getter
