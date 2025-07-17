@@ -34,5 +34,13 @@ public class Bank{
 	private String account;
 
 	@Column(name = "balance")
-	private double balance;
+	private Integer balance;
+
+	public void setBalance(double balance){
+		this.balance = (int) balance * 100;
+	}
+
+	public double getBalance(){
+		return (double) balance / 100;
+	}
 }

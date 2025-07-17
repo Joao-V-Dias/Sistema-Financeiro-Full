@@ -26,9 +26,13 @@ public class PaymentTitle{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
+	@ManyToOne
+	@Column(name = "idDocument")
 	private Long idDocument;
 
-	private double amount;
+	@Column(name = "amount")
+	private Integer amount;
 
+	@Column(name = "dueDate")
 	private LocalDate dueDate;
 }
