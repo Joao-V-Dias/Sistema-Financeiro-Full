@@ -28,7 +28,7 @@ public class PaymentTitle{
 	private Long id;
 
 	@ManyToOne
-	@Column(name = "idDocument")
+	@JoinColumn(name = "document_id")
 	private Document document;
 
 	@Column(name = "amount")
