@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 /**
@@ -31,10 +32,8 @@ public class PaymentTitle{
 	private Document document;
 
 	@Column(name = "amount")
-	private Integer amount;
+	private BigDecimal amount;
 
 	@Column(name = "dueDate")
 	private LocalDate dueDate;
-
-
 }

@@ -24,7 +24,6 @@ import java.time.LocalDate;
 @Entity
 @Table(name = "partner")
 public class Partner{
-
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 

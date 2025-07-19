@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+
 /**
  * Banco -
  *
@@ -20,7 +22,6 @@ import lombok.Setter;
 @Entity
 @Table(name = "bank")
 public class Bank{
-
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
@@ -34,13 +35,5 @@ public class Bank{
 	private String account;
 
 	@Column(name = "balance")
-	private Integer balance;
-
-	public void setBalance(double balance){
-		this.balance = (int) balance * 100;
-	}
-
-	public double getBalance(){
-		return (double) balance / 100;
-	}
+	private BigDecimal balance;
 }
