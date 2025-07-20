@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.joao</groupId>
-	<artifactId>Sistema-Financeiro-API</artifactId>
+	<artifactId>backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Sistema-Financeiro-API</name>
 	<description>Sistema Financeiro para gerenciamento de entradas e saidas</description>
